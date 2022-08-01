@@ -23,7 +23,8 @@ export default {
         }
     },
     methods:{
-        async signUp(){
+        async signUp(e){
+            event.preventDefault()
             console.log(this.name,this.email,this.password)
             let result=await axios.post('http://localhost:3001/',{
                 name:this.name,
@@ -31,9 +32,10 @@ export default {
                 password:this.password
             });
             console.log(result)
-            if(result.status==201){
+            if(result.status==200){
                 console.log('signup done')
             }
+            localStorage.setItem("user-info",JSON.stringify(result.data))
         }
     }
 }
