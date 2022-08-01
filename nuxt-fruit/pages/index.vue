@@ -13,4 +13,14 @@
 <script>
 </script>
 <style>
+#login input{
+    width: 300px;
+    height:40px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid skyblue
+
+}
 </style>
